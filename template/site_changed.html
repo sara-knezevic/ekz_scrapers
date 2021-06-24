@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .content {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e0e0e0;
+        color: #11110f;
+        padding: 0.5%;
+      }
+
+      .disclaimer {
+        text-align: center;
+      }
+
+      .singleDiff {
+        background-color: #9e9e9e;
+        margin: 5%;
+        border: 1px solid #ffffff;
+        padding: 2.5%;
+      }
+
+      .newText {
+        background-color: #ff6f00;
+        padding: 0.5%;
+      }
+
+      .oldText {
+        background-color: #626868;
+        color: #FFFFFF;
+        padding: 0.5%;
+      }
+
+      .deletedText {
+        background-color: #1b5e20;
+        color: #FFFFFF;
+        padding: 0.5%;
+      }
+
+      .mailHeader {
+        text-align: center;
+        font-size: 38px;
+      }
+
+      .generatedContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        font-size: 18px;
+      }
+
+      .generalInfo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        font-size: 18px;
+      }
+
+      .separator {
+        border-bottom: 1px solid #ffffff;
+      }
+
+      .siteUrl {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .legend {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 800px){
+        .content {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e0e0e0;
+        color: #11110f;
+        padding: 0.5%;
+      }
+
+      .singleDiff {
+        background-color: #616161;
+        margin: 7.5%;
+        border: 1px solid #ffffff;
+        padding: 2.5%;
+      }
+
+      .newText {
+        background-color: #E8AFAF;
+        padding: 0.5%;
+      }
+
+      .oldText {
+        background-color: #626868;
+        color: #FFFFFF;
+        padding: 0.5%;
+      }
+
+      .deletedText {
+        background-color: #273C2C;
+        color: #FFFFFF;
+        padding: 0.5%;
+      }
+
+      .mailHeader {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .generatedContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .generalInfo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .separator {
+        border-bottom: 1px solid #ffffff;
+      }
+
+      .siteUrl {
+        color: #11110f;
+        text-align: center;
+        font-size: 12px;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      .legend {
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        font-size: 12px;
+      }
+      }
+    </style>
+    <title>Website tracking</title>
+  </head>
+  <body>
+    <div class="content">
+      <div>
+        <p class="mailHeader">EKŽ praćenje sajtova</p>
+      </div>
+    <div class='generalInfo'>
+      <p class="siteUrl">Link: <a href="{{site_url}}">{{ site_url }}</a></p>
+      <div class="legend">
+        <p><span class="newText"> Nov tekst</span></p>
+        <p><span class="oldText"> Stari tekst</span></p>
+        <p><span class="deletedText"> Izbrisan text</span></p>
+        <p><span class="unchangedText"> Nepromenjen text</span></p>
+      </div>
+    </div>
+      <div class="generatedContent">
+        {{generated_content}}
+      </div>
+      <div class="disclaimer">
+        Ovaj e-mail je poslat automatski. Za sve greške koje primetite, molim Vas da prijavite na <a href="mailto:lost.func@gmail.com">lost.func@gmail.com</a>. Hvala!
+      </div>
+    </div>
+  </body>
+</html>

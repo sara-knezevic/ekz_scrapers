@@ -1,0 +1,60 @@
+{
+    "sites":[
+        {
+            "name": "Podaci o kvalitetu činilaca životne sredine",
+            "url": "https://www.beograd.rs/cir/gradska-vlast/1746715-podaci-o-kvalitetu-cinilaca-zivotne-sredine/",
+            "selector": {
+                "name":"div", 
+                "attrs":{"class":"lb_links"},
+                "pages": 1,
+                "deepScrape": false
+            },
+            "fileUpload": true,
+            "fileSelector": "a:nth-child(1)"
+        },
+        {
+            "name": "Javni uvid - sektor za prostorno planiranje i urbanizam",
+            "url": "https://www.mgsi.gov.rs/lat/dokumenti-list/137/180",
+            "selector": {
+                "name":"div",
+                "attrs":{"id":"main"},
+                "pages": 1,
+                "deepScrape": true,
+                "deepSelector": {
+                    "name":"div",
+                    "attrs":{"class":"node-document"},
+                    "link_prefix":"https://www.mgsi.gov.rs",
+                    "link_extractor":"a",
+                    "link_url":"href",
+                    "link_name":".split('/')[-1]",
+                    "deepName": ".with-tabs",
+                    "deepFileUpload": true,
+                    "deepFileSelector":"div.field-item > span > a"
+                }
+            },
+            "fileUpload": false
+        },
+        {
+            "name": "Gradski oglasi, konkursi i tenderi",
+            "url": "https://www.beograd.rs/cir/gradski-oglasi-konkursi-i-tenderi/910-oglasi/",
+            "selector": {
+                "name":"div",
+                "attrs":{"class":"code10"},
+                "pages":".Zebra_Pagination > ul:nth-child(1) > li:nth-last-child(2) > a:nth-child(1)",
+                "deepScrape": false
+            },
+            "fileUpload": false
+        },
+        {
+            "name": "Ekologija - javne rasprave",
+            "url": "https://www.ekologija.gov.rs/informacije-od-javnog-znacaja/javne-rasprave",
+            "selector": {
+                "name":"div",
+                "attrs":{"id":"block-views-block-konkursi-block-4"},
+                "pages": 1,
+                "deepScrape": false
+            },
+            "fileUpload": false
+        }
+    ]
+}
